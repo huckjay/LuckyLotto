@@ -7,12 +7,8 @@ Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
-#WAI ADDING HERE
-	ENV["RAILS_ENV"] ||= 'test'
-		require File.expand_path("../../config/environment", __FILE__)
-		require 'rspec/rails'
-		require 'rspec/autorun'
-	end
+
+end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
@@ -69,9 +65,6 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
-
-#WAI ADDING
-	config.mock_with :rspec
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+
   def lotto
   end
 

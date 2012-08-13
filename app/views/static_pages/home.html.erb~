@@ -1,21 +1,41 @@
-<% provide(:title, 'Home') %>
+
+
 <% provide(:lotto, (1..49).each.to_a.shuffle[1..6].sort.to_s) %>
 <% provide(:euro_main, (1..50).each.to_a.shuffle[1..5].sort.to_s)%>
 <% provide(:euro_stars, (1..11).each.to_a.shuffle[1..2].sort.to_s)%>
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<title> <%= yield(:title)%> </title>
-	</head>
-	<body>
-		<h1>Luck "E" Lotto HomePage</h1>
-		<p>This is the winning lotto generating application</p>
-		<p>The winning numbers for this weeks lotto are <%= yield(:lotto)%> </p>
-	
-		<h1>Luck "E" Euro numbers</h1>
-		<p>The winning numbers for this weeks Euromillions are <%= yield(:euro_main)%> 
-			with lucky stars <%= yield(:euro_stars)%> </p>
+<div class="center hero-unit">
 
-	</body>
-</html>
+	<h1>Luck "E" Lottery page!</h1>
+
+	<h2> Lotto </h2>
+	<p>Welcome to the lotto generating application. 
+	<p>This website generates some "random" numbers if you are stuck for picking your winning lottery numbers!
+	<p>You can pick either pick for this weeks Lotto or Euromillions.
+	<p>The winning numbers for this weeks lotto are <%= yield(:lotto)%> </p>
+
+<!--	<%= link_to "Get numbers now!", '#', class: "btn btn-large btn-primary" %> -->
+	<%= link_to "Get numbers now!", lotto_path, class: "btn btn-large btn-primary" %>
+
+	<br>
+	<br>
+	<h2>Euromillions</h2>
+	<p>The winning numbers for this weeks Euromillions are <%= yield(:euro_main)%> 
+		with lucky stars <%= yield(:euro_stars)%> </p>
+	
+<!--	<%= link_to "Get numbers now!", '#', class: "btn btn-large btn-primary" %> -->
+	<%= link_to "Get numbers now!", euro_path, class: "btn btn-large btn-primary" %>
+
+
+	<h2>Sign in section</h2>
+	<p>You can sign in for more options, just click the sign in button</p>
+	
+	<%= link_to "Sign In", signup_path, class: "btn btn-large btn-primary" %>
+
+</div>
+
+<p>you can check it on <a href =http://young-summer-3361.herokuapp.com>Heroku</a>.
+
+
+<p><%= link_to image_tag("rails.png", alt: "Rails-logo"), 'http://rubyonrails.org/' %>
+

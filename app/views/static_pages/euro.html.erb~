@@ -1,0 +1,12 @@
+<% provide(:euro_main, (1..50).each.to_a.shuffle[1..5].sort.to_s)%>
+<% provide(:euro_stars, (1..11).each.to_a.shuffle[1..2].sort.to_s)%>
+
+
+	<h1>Euro Millions Page</h1>
+
+	<p>The winning numbers for this weeks Euromillions are <%= yield(:euro_main)%> 
+		with lucky stars <%= yield(:euro_stars)%> </p>
+
+
+you can check it on <a href =http://young-summer-3361.herokuapp.com>Heroku</a>.
+

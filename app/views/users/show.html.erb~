@@ -7,8 +7,9 @@
 				<%= @user.name %>
 				<%= gravatar_for @user %>
 			</h1> 
+			<h2>Lala Laaar </h2>
 		</section>
 	</aside>
 </div>
 <%= @user.email %>
-<%= @user.password_digest %>
+

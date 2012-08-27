@@ -1,12 +1,14 @@
+<% provide(:title, 'Lotto') %> 
 <% provide(:lotto, (1..49).each.to_a.shuffle[1..6].sort.to_s) %>
 
-
 	<h1>Welcome to the Lotto Page</h1>
-	<p>The winning numbers for this weeks lotto are:</p>
-	<br>
-	<h2><em><%= yield(:lotto)%></em></h2>
 
-	<p>This is the winning lotto generating application</p>
+	<h2>This is the "winning" lotto generating application!</h2>
+
+	<h2>The winning <%= yeild(:title)%> numbers for this weeks lotto are:</h2>
+	<br>
+	<h1><em><%= yield(:lotto)%></em></h1>
+
 
 you can check it on <a href =http://young-summer-3361.herokuapp.com>Heroku</a>.
 

@@ -1,10 +1,17 @@
 Sandbox::Application.routes.draw do
 
-  get "users/new"
+#  get "users/new"
+
+	resources :users
+
+	resources :sessions, only: [:new, :create, :destroy]
 
 	root to: 'static_pages#home'
 
 	match 'signup', 	to: 'users#new'
+	match 'signin',		to: 'sessions#new'
+	match 'signout',	to: 'session#destroy', via: :delete
+
 
 	match '/lotto', 	to: 'static_pages#lotto'
 	match '/euro', 		to: 'static_pages#euro'

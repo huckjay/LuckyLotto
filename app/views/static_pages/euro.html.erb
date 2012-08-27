@@ -6,8 +6,14 @@
 
 	<h1>Euro Millions Page</h1>
 
-	<p>The winning numbers for this weeks Euromillions are <%= yield(:euro_main)%> 
-		with lucky stars <%= yield(:euro_stars)%> </p>
+	<h2>This is the "winning"  <%= yield(:title)%>  generating application!</h2>
+
+	<h2>The winning <%= yield(:title)%> numbers for this weeks draw are:</h2>
+	<br>
+
+	<h1><em> <%= yield(:euro_main)%> </em></h1> 
+	<h2>with lucky stars...</h2> 
+	<h1><em> <%= yield(:euro_stars)%> </em></h1>
 
 
 you can check it on <a href =http://young-summer-3361.herokuapp.com>Heroku</a>.

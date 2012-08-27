@@ -8,29 +8,46 @@
 
 	<h1>Luck "E" Lottery page!</h1>
 
-	<h2> Lotto </h2>
+
+	<br>
 	<p>Welcome to the lotto generating application. 
 	<p>This website generates some "random" numbers if you are stuck for picking your winning lottery numbers!
 	<p>You can pick either pick for this weeks Lotto or Euromillions.
-	<p>The winning numbers for this weeks lotto are <%= yield(:lotto)%> </p>
 
-<!--	<%= link_to "Get numbers now!", '#', class: "btn btn-large btn-primary" %> -->
-	<%= link_to "Get numbers now!", lotto_path, class: "btn btn-large btn-primary" %>
+
+	<h1> Lotto </h1>
+
+	<%= link_to "Get winning numbers!", lotto_path, class: "btn btn-large btn-primary" %>
+
+	<p> If you're looking to generate Lotto numbers click above!
+<!--	<p>The winning numbers for this weeks lotto are <%= yield(:lotto)%> </p>	-->
+
 
 	<br>
 	<br>
-	<h2>Euromillions</h2>
+	<h1>Euro Millions</h1>
+
+	<%= link_to "Get winning numbers!", euro_path, class: "btn btn-large btn-primary" %>
+
+<!--	
+
 	<p>The winning numbers for this weeks Euromillions are <%= yield(:euro_main)%> 
 		with lucky stars <%= yield(:euro_stars)%> </p>
 	
-<!--	<%= link_to "Get numbers now!", '#', class: "btn btn-large btn-primary" %> -->
-	<%= link_to "Get numbers now!", euro_path, class: "btn btn-large btn-primary" %>
+	<%= link_to "Get numbers now!", '#', class: "btn btn-large btn-primary" %> -->
+
+	<p>If you're looking to generate some Euromillions numbers click above!
+	<br>
+	<br>
+	<br>
+	<h2>Sign up section</h2>
 
 
-	<h2>Sign in section</h2>
-	<p>You can sign in for more options, just click the sign in button</p>
+	<%= link_to "Sign up here", signup_path, class: "btn btn-large btn-primary" %>
+	<p>If your not a member, then you can sign up here to get all the benefits! 
+
+	<p>If you're already a member just click sign in link!</p>
 	
-	<%= link_to "Sign Up", signup_path, class: "btn btn-large btn-primary" %>
 
 </div>
 
